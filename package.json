@@ -9,7 +9,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fawmi/vue-google-maps": "^0.9.79",
     "aos": "^2.3.4",
+    "google-maps-api-loader": "^1.1.1",
     "vue": "^3.3.4"
   },
   "devDependencies": {
