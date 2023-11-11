@@ -1,5 +1,5 @@
 <template>
-    <div class="2xl:py-[100px]  py-[50px] container bg-[#5277F7] overflow-hidden relative">
+    <div class="2xl:py-[100px]  py-[50px] container bg-[#5277F7] overflow-hidden relative overflow-x-hidden">
         <div class="absolute top-0 left-0 2xl:w-[353px] w-[148px] aos-init aos-animate" data-aos="fade-right" data-aos-duration="1500">
             <img src="../assets/elipse1.svg" alt="elipse">
         </div>

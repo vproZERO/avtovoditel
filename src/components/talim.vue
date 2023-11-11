@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div class="container overflow-x-hidden" >
         <div class="2xl:block hidden py-[150px]">
             <h1 class="uppercase text-center text-[40px] font-bold mb-[70px] aos-init aos-animate" data-aos="fade-up" data-aos-duration="1500">TA'LIM BOSQICHLARI</h1>
             <div class="flex items-center justify-around aos-init aos-animate" data-aos-duration="1500" data-aos="fade-up">
