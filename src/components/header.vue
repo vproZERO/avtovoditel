@@ -1,8 +1,8 @@
 <template>
-    <div class="header_box bg-[#19181C] w-[100%] z-40 relative  overflow-x-hidden">
+    <div class="header_box bg-[#19181C] w-[100%] z-40 relative relative overflow-x-hidden">
 
 
-        <div class="header_box2  2xl:hidden block  mx-auto relative ">
+        <div class="header_box2  2xl:hidden block  mx-auto  ">
             <div class="res_box w-[390px] mx-auto">
                 <a class="block w-[70px] mb-[16px] pt-[10px] pl-[10px]" href="#">
                     <img src="../assets/logo.svg" alt="logo">
@@ -60,7 +60,7 @@
                             <button v-on:click="isOpen = !isOpen" class="bg-[#407BFF] hover:bg-[#2C5AC2] rounded-[50px] py-[14px] w-full mb-[60px]">
                                 <p class="text-white text-[16px] font-medium text-center" >Ariza qoldirish</p>
                             </button>
-                            <div class="absolute bottom-0 left-0 mt-[20px] bg-[#2B2B31] w-full py-[10px]">
+                            <div class="absolute bottom-0  left-0 mt-[20px] bg-[#2B2B31] w-full py-[10px]">
                                 <p class="text-center text-white text-[13px] font-medium">Xonalarimiz eshiklari siz uchun ochiq</p>
                             </div>
                         </div>
