@@ -1,5 +1,5 @@
 <template>
-    <div class="2xl:py-[150px] py-[50px] overflow-x-hidden">
+    <div class="2xl:py-[150px] py-[50px] overflow-x-hidden relative">
         <h1 class="text-center font-bold text-[#1B1B35] text-[24px] 2xl:text-[40px] 2xl:mb-[40px] mb-[15px] aos-init aos-animate " data-aos="fade-up" data-aos-duration="1500">Narxlar</h1>
         <div class="flex items-center 2xl:w-[416px] w-[353px] mx-auto justify-center gap-6 mt-[23px] p-[2px] bg-[#F3F3F3] rounded-lg">
             <h2 class="text-[14px]  2xl:text-[16px] 2xl:leading-[18px] 2xl:py-[14px] 2xl:px-[12px] 2xl:w-[206px] w-[174px] px-[12px] py-[6px] rounded-lg leading-4 cursor-pointer aos-init aos-animate" data-aos="fade-right" data-aos-duration="1500" :class="isNaqd ? 'active' : 'deactivated'" @click="oylikToNaqd">Naqt to'lash</h2>
@@ -15,7 +15,7 @@
                     <div class="2xl:w-[150px]">
                         <img src="../assets/car.svg" alt="car">
                     </div>
-                    <button class="border-[#E0E0E0] border-[2px] px-[22px] py-[12px] 2xl:w-full rounded-lg text-[14px] text-[#1B1B35] font-medium cursor-pointer">
+                    <button v-on:click="isOpen = !isOpen" class="border-[#E0E0E0] border-[2px] px-[22px] py-[12px] 2xl:w-full rounded-lg text-[14px] text-[#1B1B35] font-medium cursor-pointer">
                         Kursni tanlash
                     </button>
                 </div>
@@ -26,7 +26,7 @@
                     <div class="2xl:w-[150px]">
                         <img src="../assets/car.svg" alt="car">
                     </div>
-                    <button class="border-[#E0E0E0] border-[2px] px-[22px] py-[12px] 2xl:w-full rounded-lg text-[14px] text-[#1B1B35] font-medium cursor-pointer">
+                    <button v-on:click="isOpen = !isOpen" class="border-[#E0E0E0] border-[2px] px-[22px] py-[12px] 2xl:w-full rounded-lg text-[14px] text-[#1B1B35] font-medium cursor-pointer">
                         Kursni tanlash
                     </button>
                 </div>
@@ -39,7 +39,7 @@
                     <div class="2xl:w-[166px] w-[98px]">
                         <img src="../assets/car2.svg" alt="car">
                     </div>
-                    <button class="border-[#E0E0E0] border-[2px] px-[22px] py-[12px] 2xl:w-full rounded-lg text-[14px] text-[#1B1B35] font-medium cursor-pointer">
+                    <button v-on:click="isOpen = !isOpen" class="border-[#E0E0E0] border-[2px] px-[22px] py-[12px] 2xl:w-full rounded-lg text-[14px] text-[#1B1B35] font-medium cursor-pointer">
                         Kursni tanlash
                     </button>
                 </div>
@@ -50,7 +50,7 @@
                     <div class="2xl:w-[129px] w-[74px]">
                         <img src="../assets/car3.svg" alt="car">
                     </div>
-                    <button class="border-[#E0E0E0] border-[2px] px-[22px] py-[12px] 2xl:w-full rounded-lg text-[14px] text-[#1B1B35] font-medium cursor-pointer">
+                    <button v-on:click="isOpen = !isOpen" class="border-[#E0E0E0] border-[2px] px-[22px] py-[12px] 2xl:w-full rounded-lg text-[14px] text-[#1B1B35] font-medium cursor-pointer">
                         Kursni tanlash
                     </button>
                 </div>
@@ -61,7 +61,7 @@
                     <div class="2xl:w-[252px] w-[142px]">
                         <img src="../assets/car4.svg" alt="car">
                     </div>
-                    <button class="border-[#E0E0E0] border-[2px] px-[22px] py-[12px] 2xl:w-full rounded-lg text-[14px] text-[#1B1B35] font-medium cursor-pointer">
+                    <button v-on:click="isOpen = !isOpen" class="border-[#E0E0E0] border-[2px] px-[22px] py-[12px] 2xl:w-full rounded-lg text-[14px] text-[#1B1B35] font-medium cursor-pointer">
                         Kursni tanlash
                     </button>
                 </div>
@@ -74,7 +74,7 @@
                     <div class="2xl:w-[166px] w-[98px]">
                         <img src="../assets/car2.svg" alt="car">
                     </div>
-                    <button class="border-[#E0E0E0] border-[2px] px-[22px] py-[12px] 2xl:w-full rounded-lg text-[14px] text-[#1B1B35] font-medium cursor-pointer">
+                    <button v-on:click="isOpen = !isOpen" class="border-[#E0E0E0] border-[2px] px-[22px] py-[12px] 2xl:w-full rounded-lg text-[14px] text-[#1B1B35] font-medium cursor-pointer">
                         Kursni tanlash
                     </button>
                 </div>
@@ -85,7 +85,7 @@
                     <div class="2xl:w-[129px] w-[74px]">
                         <img src="../assets/car3.svg" alt="car">
                     </div>
-                    <button class="border-[#E0E0E0] border-[2px] px-[22px] py-[12px] 2xl:w-full rounded-lg text-[14px] text-[#1B1B35] font-medium cursor-pointer">
+                    <button v-on:click="isOpen = !isOpen" class="border-[#E0E0E0] border-[2px] px-[22px] py-[12px] 2xl:w-full rounded-lg text-[14px] text-[#1B1B35] font-medium cursor-pointer">
                         Kursni tanlash
                     </button>
                 </div>
@@ -98,16 +98,34 @@
                     <div class="2xl:w-[252px] w-[142px]">
                         <img src="../assets/car4.svg" alt="car">
                     </div>
-                    <button class="border-[#E0E0E0] border-[2px] px-[22px] py-[12px] w-full rounded-lg text-[14px] text-[#1B1B35] font-medium cursor-pointer">
+                    <button v-on:click="isOpen = !isOpen" class="border-[#E0E0E0] border-[2px] px-[22px] py-[12px] w-full rounded-lg text-[14px] text-[#1B1B35] font-medium cursor-pointer">
                         Kursni tanlash
                     </button>
                 </div>
             </div>
-            <button class="bg-[#407BFF] flex items-center justify-center rounded-[50px] w-[353px] py-[14px] 2xl:w-[400px] 2xl:py-[15px] mx-auto aos-init aos-animate" data-aos="fade-up" data-aos-duration="1500">
+            <button v-on:click="isOpen = !isOpen" class="bg-[#407BFF] flex items-center justify-center rounded-[50px] w-[353px] py-[14px] 2xl:w-[400px] 2xl:py-[15px] mx-auto aos-init aos-animate" data-aos="fade-up" data-aos-duration="1500">
                 <p class="text-white font-medium text-[16px] 2xl:text-[20px] text-center">Ariza qoldirish</p>
             </button>
         </div>
 
+
+        <div class="fixed top-0 bottom-0 left-0 right-0 bg-black bg-opacity-[50%] overflow-hidden z-40" v-if="isOpen">
+            <div class="header_modal bg-white 2xl:w-[450px] w-[353px] h-[315px] mx-auto 2xl:h-[405px] mx-auto 2xl:mt-[10%] mt-[234px] p-[20px] rounded-[12px] 2xl:py-[40px] 2xl:px-[30px] relative">
+                <button v-on:click="isOpen = !isOpen" class="absolute top-[-30px] right-0">
+                    <img src="../assets/plus.svg" alt="plus">
+                </button>
+
+                <h1 class="text-center 2xl:text-[24px] text-[20px] font-semibold mb-[3px]">Telefon raqamingizni qoldiring</h1>
+                <p class="text-center text-[#BABABA] 2xl:text-[18px] text-[16px] mb-[20px]">Biz siz bilan albatta bog'lanamiz</p>
+                <form >
+                    <input class="border-b-[1px] border-[#E0E0E0] w-full 2xl:mb-[50px] mb-[40px]" type="text" id="name" name="name" placeholder="Ism">
+                    <input class="border-b-[1px] border-[#E0E0E0] w-full mb-[50px] " type="tel" id="tel" name="tel" placeholder="Raqamingiz">
+                </form>
+                <button class="w-full py-[14px] bg-[#407BFF] rounded-[50px] 2xl:rounded-[52px] 2xl:py-[15px]">
+                    <p class="text-white 2xl:text-[20px] font-medium text-center text-[16px]">Ariza qoldirish</p>
+                </button>
+            </div>
+        </div>
     </div>
 </template>
 <script>
@@ -116,6 +134,7 @@ export default {
         return{
             isNaqd: true,
             isOylik: false,
+            isOpen: false
         }
     },
     methods: {
