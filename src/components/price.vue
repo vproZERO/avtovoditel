@@ -171,14 +171,14 @@ export default {
                         icon: 'success',
                         title: "Arizangiz qabul qilindi)",
                         showConfirmButton: false,
-                        timer: 1000,
+                        timer: 1500,
                     })
                 }else{
                     Swal.fire({
                         icon: 'warning',
                         title: 'Iltimos malumotlaringizni toliq kiritsangiz!)',
                         showConfirmButton: false,
-                        timer: 1000,
+                        timer: 1800,
                     })
                 }
 
