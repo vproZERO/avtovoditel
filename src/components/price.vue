@@ -1,5 +1,5 @@
 <template>
-    <div class="2xl:py-[150px] py-[50px] overflow-x-hidden relative">
+    <div class="2xl:py-[150px] py-[50px] overflow-hidden relative">
         <h1 class="text-center font-bold text-[#1B1B35] text-[24px] 2xl:text-[40px] 2xl:mb-[40px] mb-[15px] aos-init aos-animate " data-aos="fade-up" data-aos-duration="1500">Narxlar</h1>
         <div class="flex items-center 2xl:w-[416px] w-[353px] mx-auto justify-center gap-6 mt-[23px] p-[2px] bg-[#F3F3F3] rounded-lg">
             <h2 class="text-[14px]  2xl:text-[16px] 2xl:leading-[18px] 2xl:py-[14px] 2xl:px-[12px] 2xl:w-[206px] w-[174px] px-[12px] py-[6px] rounded-lg leading-4 cursor-pointer aos-init aos-animate" data-aos="fade-right" data-aos-duration="1500" :class="isNaqd ? 'active' : 'deactivated'" @click="oylikToNaqd">Naqt to'lash</h2>
@@ -8,7 +8,7 @@
 
         <div class="py-[20px] 2xl:py-[40px]">
             <div class="flex items-center justify-center gap-3 pb-[12px] 2xl:pb-[24px] 2xl:gap-[24px]">
-                <div class="bg-[#FFFFFF] border-[#E0E0E0] border flex items-center justify-center flex-col 2xl:px-[25px] rounded-lg gap-4 p-[15px]  2xl:py-[25px] 2xl:w-[636px] aos-init aos-animate" data-aos="fade-up" data-aos-duration="1500">
+                <div class="bg-[#FFFFFF] border-[#E0E0E0] border flex items-center justify-center flex-col 2xl:px-[25px] rounded-lg gap-4 p-[15px]  2xl:py-[25px] 2xl:w-[636px] aos-init aos-animate" data-aos="fade-right" data-aos-duration="1500">
                     <h1 class="bg-[#E0E0E0] rounded-full text-[24px] 2xl:text-[40px] 2xl:w-[71px] text-center text-[#1B1B35] font-medium py-[4px] px-[15px]">B</h1>
                     <p class="text-[#1B1B35] text-[22px] 2xl:text-[34px] font-semibold" v-if="isNaqd">2 900 000</p>
                     <p class="text-[#808080] text-[14px] 2xl:text-[18px] w-[140px] 2xl:w-[366px] text-center" v-if="isOylik">Boshlangich o'qish summasi 40% qolgani 90 kun ichida, o'qish davomiyligi  4 oy 20 kun</p>
@@ -19,7 +19,7 @@
                         Kursni tanlash
                     </button>
                 </div>
-                <div class="bg-[#FFFFFF] border-[#E0E0E0] border flex items-center justify-center flex-col 2xl:px-[25px] rounded-lg gap-4 p-[15px]  2xl:py-[25px] 2xl:w-[636px]  aos-init aos-animate" data-aos="fade-up" data-aos-duration="1500">
+                <div class="bg-[#FFFFFF] border-[#E0E0E0] border flex items-center justify-center flex-col 2xl:px-[25px] rounded-lg gap-4 p-[15px]  2xl:py-[25px] 2xl:w-[636px]  aos-init aos-animate" data-aos="fade-left" data-aos-duration="1500">
                     <h1 class="bg-[#E0E0E0] rounded-full text-[24px] 2xl:text-[40px] 2xl:w-[71px] text-center text-[#1B1B35] font-medium py-[4px] 2xl:px-[5px] px-[6px]">BC</h1>
                     <p class="text-[#1B1B35] text-[22px] 2xl:text-[34px] font-semibold" v-if="isNaqd">3 500 000</p>
                     <p class="text-[#808080] text-[14px] 2xl:text-[18px] w-[140px] 2xl:mb-[26px] mb-[42px] 2xl:w-[366px] text-center" v-if="isOylik">Boshlangich o'qish summasi 1 000 000, o'qish davomiyligi 6 oy </p>
@@ -32,7 +32,7 @@
                 </div>
             </div>
             <div class=" 2xl:flex hidden items-center justify-center gap-3 pb-[12px] 2xl:pb-[24px] 2xl:gap-[24px]">
-                <div class="bg-[#FFFFFF] border-[#E0E0E0] border flex items-center justify-center flex-col 2xl:px-[25px] rounded-lg gap-4 p-[15px]  2xl:py-[25px] 2xl:w-[416px] aos-init aos-animate" data-aos="fade-up" data-aos-duration="1500">
+                <div class="bg-[#FFFFFF] border-[#E0E0E0] border flex items-center justify-center flex-col 2xl:px-[25px] rounded-lg gap-4 p-[15px]  2xl:py-[25px] 2xl:w-[416px] aos-init aos-animate" data-aos="fade-up-right" data-aos-duration="1500">
                     <h1 class="bg-[#E0E0E0] rounded-full text-[24px] 2xl:text-[40px] 2xl:w-[71px] text-center text-[#1B1B35] font-medium py-[4px] px-[13px]">C</h1>
                     <p class="text-[#1B1B35] text-[22px] 2xl:text-[34px] font-semibold" v-if="isNaqd">1 300 000</p>
                     <p class="text-[#808080] text-[14px] 2xl:text-[18px]  w-[140px] 2xl:w-[366px] text-center 2xl:mb-[28px]" v-if="isOylik">50% dan 2 oy, o'qish davomiyligi 2 oy</p>
@@ -54,7 +54,7 @@
                         Kursni tanlash
                     </button>
                 </div>
-                <div class="bg-[#FFFFFF] border-[#E0E0E0] border flex items-center justify-center flex-col 2xl:px-[25px] rounded-lg gap-4 p-[15px]  2xl:py-[25px] 2xl:w-[416px] aos-init aos-animate" data-aos="fade-up" data-aos-duration="1500">
+                <div class="bg-[#FFFFFF] border-[#E0E0E0] border flex items-center justify-center flex-col 2xl:px-[25px] rounded-lg gap-4 p-[15px]  2xl:py-[25px] 2xl:w-[416px] aos-init aos-animate" data-aos="fade-up-left" data-aos-duration="1500">
                     <h1 class="bg-[#E0E0E0] rounded-full text-[24px] 2xl:text-[40px] 2xl:w-[71px] text-center text-[#1B1B35] font-medium py-[4px] px-[13px]">E</h1>
                     <p class="text-[#1B1B35] text-[22px] 2xl:text-[34px] font-semibold" v-if="isNaqd">1 500 000</p>
                     <p class="text-[#808080] text-[14px] 2xl:text-[18px] w-[140px] 2xl:w-[366px] text-center" v-if="isOylik">Boshlangich o'qish summasi  50% 2 oy, o'qish davomiyligi 2 oy</p>
@@ -67,7 +67,7 @@
                 </div>
             </div>
             <div class=" 2xl:hidden flex items-center justify-center gap-3 pb-[12px] 2xl:pb-[24px] 2xl:gap-[24px]">
-                <div class="bg-[#FFFFFF] border-[#E0E0E0] border flex items-center justify-center flex-col 2xl:px-[25px] rounded-lg gap-4 p-[15px]  2xl:py-[25px] 2xl:w-[416px] aos-init aos-animate" data-aos="fade-up" data-aos-duration="1500">
+                <div class="bg-[#FFFFFF] border-[#E0E0E0] border flex items-center justify-center flex-col 2xl:px-[25px] rounded-lg gap-4 p-[15px]  2xl:py-[25px] 2xl:w-[416px] aos-init aos-animate" data-aos="fade-right" data-aos-duration="1500">
                     <h1 class="bg-[#E0E0E0] rounded-full text-[24px] 2xl:text-[40px] 2xl:w-[71px] text-center text-[#1B1B35] font-medium py-[4px] px-[13px]">C</h1>
                     <p class="text-[#1B1B35] text-[22px] 2xl:text-[34px] font-semibold" v-if="isNaqd">1 300 000</p>
                     <p class="text-[#808080] text-[14px] 2xl:text-[18px]  w-[140px] 2xl:w-[366px] text-center 2xl:mb-[28px] mb-[20px]" v-if="isOylik">50% dan 2 oy, o'qish davomiyligi 2 oy</p>
@@ -78,7 +78,7 @@
                         Kursni tanlash
                     </button>
                 </div>
-                <div class="bg-[#FFFFFF] border-[#E0E0E0] border flex items-center justify-center flex-col 2xl:px-[25px] rounded-lg gap-4 p-[15px]  2xl:py-[25px] 2xl:w-[416px] aos-init aos-animate" data-aos="fade-up" data-aos-duration="1500">
+                <div class="bg-[#FFFFFF] border-[#E0E0E0] border flex items-center justify-center flex-col 2xl:px-[25px] rounded-lg gap-4 p-[15px]  2xl:py-[25px] 2xl:w-[416px] aos-init aos-animate" data-aos="fade-left" data-aos-duration="1500">
                     <h1 class="bg-[#E0E0E0] rounded-full text-[24px] 2xl:text-[40px] 2xl:w-[71px] text-center text-[#1B1B35] font-medium py-[4px] px-[13px]">D</h1>
                     <p class="text-[#1B1B35] text-[22px] 2xl:text-[34px] font-semibold" v-if="isNaqd">3 100 000</p>
                     <p class="text-[#808080] text-[14px] 2xl:text-[18px] w-[140px] 2xl:w-[366px] text-center 2xl:mb-[2.5px]" v-if="isOylik">Boshlangich o'qish summasi 45%,  o'qish davomiyligi 3 oy</p>
@@ -118,23 +118,29 @@
                 <h1 class="text-center 2xl:text-[24px] text-[20px] font-semibold mb-[3px]">Telefon raqamingizni qoldiring</h1>
                 <p class="text-center text-[#BABABA] 2xl:text-[18px] text-[16px] mb-[20px]">Biz siz bilan albatta bog'lanamiz</p>
                 <form >
-                    <input class="border-b-[1px] border-[#E0E0E0] w-full 2xl:mb-[50px] mb-[40px]" type="text" id="name" name="name" placeholder="Ism">
-                    <input class="border-b-[1px] border-[#E0E0E0] w-full mb-[50px] " type="tel" id="tel" name="tel" placeholder="Raqamingiz">
+                    <input class="border-b-[1px] border-[#E0E0E0] w-full 2xl:mb-[50px] mb-[40px]" type="text" id="name" name="name" v-model="name" placeholder="Ism">
+                    <input class="border-b-[1px] border-[#E0E0E0] w-full mb-[50px] " type="tel" id="tel" name="tel" v-model="tel" placeholder="Raqamingiz">
                 </form>
                 <button class="w-full py-[14px] bg-[#407BFF] rounded-[50px] 2xl:rounded-[52px] 2xl:py-[15px]">
-                    <p class="text-white 2xl:text-[20px] font-medium text-center text-[16px]">Ariza qoldirish</p>
+                    <p class="text-white 2xl:text-[20px] font-medium text-center text-[16px]" @click="loginAction()">Ariza qoldirish</p>
                 </button>
             </div>
         </div>
     </div>
 </template>
 <script>
+import axios from 'axios';
+import Swal from 'sweetalert2'
 export default {
-    data() {
+    data:() => {
         return{
             isNaqd: true,
             isOylik: false,
-            isOpen: false
+            isOpen: false,
+            name: "",
+            tel: "",
+            validationErrors: {},
+            isSubmitting: false
         }
     },
     methods: {
@@ -149,6 +155,42 @@ export default {
                 this.isNaqd = true,
                 this.isOylik = false
             }
+        },
+        loginAction() {
+            this.isSubmitting = true;
+            let payload = {
+                name : this.name,
+                tel : this.tel
+            };
+            axios.post("https://fakestoreapi.com/users" , payload).then((res) => {
+                localStorage.setItem("token", res.data.token);
+
+                if(this.name, this.tel){
+                    this.isOpen = false;
+                    Swal.fire({
+                        icon: 'success',
+                        title: "Arizangiz qabul qilindi)",
+                        showConfirmButton: false,
+                        timer: 1000,
+                    })
+                }else{
+                    Swal.fire({
+                        icon: 'warning',
+                        title: 'Iltimos malumotlaringizni toliq kiritsangiz!)',
+                        showConfirmButton: false,
+                        timer: 1000,
+                    })
+                }
+
+                return res
+            })
+            .catch((error) => {
+                this.isSubmitting = false;
+                if(error.res.data.errors != undefined) {
+                    this.validationErrors = error.res.data.errors
+                }
+                return error
+            })
         }
     },
 }

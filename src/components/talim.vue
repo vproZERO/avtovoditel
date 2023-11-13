@@ -1,5 +1,5 @@
 <template>
-    <div class="container overflow-x-hidden" >
+    <div class="container overflow-hidden" >
         <div class="2xl:block hidden py-[150px]">
             <h1 class="uppercase text-center text-[40px] font-bold mb-[70px] aos-init aos-animate" data-aos="fade-up" data-aos-duration="1500">TA'LIM BOSQICHLARI</h1>
             <div class="flex items-center justify-around aos-init aos-animate" data-aos-duration="1500" data-aos="fade-up">
@@ -61,7 +61,7 @@
         <div class="2xl:hidden block py-[50px] ">
             <h1 class="text-center font-bold text-[24px] text-[#1B1B35] mb-[30px] aos-init aos-animate" data-aos-duration="1500" data-aos="fade-up">TA'LIM BOSQICHLARI</h1>
             <div class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="1500">
-                <div class="flex items-center justify-around mb-[50px] " >
+                <div class="flex items-center justify-around mb-[130px] " >
                     <div>
                         <div class="mb-[5px] w-[50px] mx-auto">
                             <img src="../assets/t1.svg" alt="img">
@@ -75,7 +75,7 @@
                         ----------
                     </div>
 
-                    <div>
+                    <div class="relative">
                         <div class="mb-[5px] w-[50px] mx-auto">
                             <img src="../assets/t2.svg" alt="img">
                         </div>
@@ -86,7 +86,7 @@
                     </div>
                 </div>
 
-                <div class="animated-text2 text-[20px] max-w-[150px] max-h-[30px] mb-[50px] rotate-[90deg] ml-[71%] ">
+                <div class="animated-text2 text-[20px] max-w-[150px] max-h-[50px] mb-[50px] rotate-[90deg] absolute top-[45%] right-[5%] ">
                     ----------
                 </div>
 
@@ -162,7 +162,7 @@ export default {
 }
 
     .animated-text {
-    animation: colorChange 15s ;
+    animation: colorChange 10s ;
     background: linear-gradient(to right, #E0E0E0, #407BFF);
     background-clip: text;
     -webkit-background-clip: text;
@@ -171,7 +171,7 @@ export default {
     animation-fill-mode: forwards;
 }
 .animated-text2 {
-    animation: colorChange 25s ;
+    animation: colorChange 20s ;
     background: linear-gradient(to right, #E0E0E0, #407BFF);
     background-clip: text;
     -webkit-background-clip: text;
@@ -180,7 +180,7 @@ export default {
     animation-fill-mode: forwards;
 }
 .animated-text3 {
-    animation: colorChange 35s ;
+    animation: colorChange 30s ;
     background: linear-gradient(to right, #E0E0E0, #407BFF);
     background-clip: text;
     -webkit-background-clip: text;
@@ -199,7 +199,7 @@ export default {
   margin: 0 auto;
 }
 .animated-img2 {
-  animation: colorChangeBg2 15s ;
+  animation: colorChangeBg2 10s ;
   background: linear-gradient(to right, #E0E0E0, #407BFF);
   background-clip: text;
   -webkit-background-clip: text;
@@ -209,7 +209,7 @@ export default {
   margin: 0 auto;
 }
 .animated-img3 {
-  animation: colorChangeBg2 25s ;
+  animation: colorChangeBg2 15s ;
   background: linear-gradient(to right, #E0E0E0, #407BFF);
   background-clip: text;
   -webkit-background-clip: text;
@@ -219,7 +219,7 @@ export default {
   margin: 0 auto;
 }
 .animated-img4 {
-  animation: colorChangeBg2 45s ;
+  animation: colorChangeBg2 25s ;
   background: linear-gradient(to right, #E0E0E0, #407BFF);
   background-clip: text;
   -webkit-background-clip: text;

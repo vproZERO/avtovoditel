@@ -77,7 +77,7 @@
                 <a href="#">
                     <img src="../assets/logo.svg" alt="logo">
                 </a>
-                <div class="bg-[#FFFFFF] py-[10px] px-[20px] bg-opacity-[10%] rounded-b-[4px]">
+                <div class="bg-[#FFFFFF] py-[10px] px-[20px] bg-opacity-[10%] rounded-b-[4px] mx-auto ">
                     <p class="text-[#D8E1FF] text-[20px] gont-medium">Xonalarimiz eshiklari siz uchun ochiq</p>
                 </div>
             </div>
@@ -144,11 +144,11 @@
                 <h1 class="text-center 2xl:text-[24px] text-[20px] font-semibold mb-[3px]">Telefon raqamingizni qoldiring</h1>
                 <p class="text-center text-[#BABABA] 2xl:text-[18px] text-[16px] mb-[20px]">Biz siz bilan albatta bog'lanamiz</p>
                 <form >
-                    <input class="border-b-[1px] border-[#E0E0E0] w-full 2xl:mb-[50px] mb-[40px]" type="text" id="name" name="name" placeholder="Ism">
-                    <input class="border-b-[1px] border-[#E0E0E0] w-full mb-[50px] " type="tel" id="tel" name="tel" placeholder="Raqamingiz">
+                    <input class="border-b-[1px] border-[#E0E0E0] w-full 2xl:mb-[50px] mb-[40px]" type="text" id="name" name="name" v-model="name" placeholder="Ism">
+                    <input class="border-b-[1px] border-[#E0E0E0] w-full mb-[50px] " type="tel" id="tel" name="tel" v-model="tel" placeholder="Raqamingiz">
                 </form>
                 <button class="w-full py-[14px] bg-[#407BFF] rounded-[50px] 2xl:rounded-[52px] 2xl:py-[15px]">
-                    <p class="text-white 2xl:text-[20px] font-medium text-center text-[16px]">Ariza qoldirish</p>
+                    <p class="text-white 2xl:text-[20px] font-medium text-center text-[16px]" @click="loginAction()">Ariza qoldirish</p>
                 </button>
             </div>
         </div>
@@ -159,10 +159,55 @@
     </div>
 </template>
 <script>
+import axios from 'axios'
+import Swal from 'sweetalert2'
 export default {
     data : () => {
         return {
-            isOpen: false
+            isOpen: false,
+            name: "",
+            tel: "",
+            validationErrors: {},
+            isSubmitting: false
+        }
+    },
+    
+    methods: {
+        loginAction() {
+            this.isSubmitting = true;
+            let payload = {
+                name : this.name,
+                tel : this.tel
+            };
+            axios.post("https://fakestoreapi.com/users" , payload).then((res) => {
+                localStorage.setItem("token", res.data.token);
+
+                if(this.name, this.tel){
+                    this.isOpen = false;
+                    Swal.fire({
+                        icon: 'success',
+                        title: "Arizangiz qabul qilindi)",
+                        showConfirmButton: false,
+                        timer: 1000,
+                    })
+                }else{
+                    Swal.fire({
+                        icon: 'warning',
+                        title: 'Iltimos malumotlaringizni toliq kiritsangiz!)',
+                        showConfirmButton: false,
+                        timer: 1000,
+                    })
+                }
+
+                return res
+            })
+            .catch((error) => {
+                this.isSubmitting = false;
+                if(error.res.data.errors != undefined) {
+                    this.validationErrors = error.res.data.errors
+                }
+                return error
+            })
         }
     },
     mounted() {
@@ -173,10 +218,14 @@ export default {
 }
 </script>
 <style scoped>
+input{
+    outline: none;
+}
     .header_box{
         background-image: url('../assets/header-bg.png') , url('../assets/blurcolor.png');
         background-repeat: no-repeat;
-        background-size: cover;
+        background-position: top center;
+        background-size: 100% , cover;
     }
     .header_modal{
         transition: all 0.4s linear;
@@ -197,7 +246,7 @@ export default {
             
             background-image: url('../assets/header-bg2.png');
             background-repeat: no-repeat;
-            background-position-x: right;
+            background-position-x: 100%;
             background-position-y: top;
         }
     }
