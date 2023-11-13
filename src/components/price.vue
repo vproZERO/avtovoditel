@@ -211,4 +211,7 @@ export default {
         transition: 0.3s;
         font-weight: 400;
     }
+    input{
+    outline: none;
+    }
 </style>
