@@ -1,71 +1,138 @@
 <template>
     <div class="container relative">
-      <iframe
-        src="https://yandex.com/map-widget/v1/?um=constructor%3A73748008eefd2cd0fdbedc588dbba1ae0eb1b1736568efbd69d5a4b876414713&amp;source=constructor"
-        width="100%"
-        height="620"
-        frameborder="0"
-        class="z-10"
-        v-if="isDefault"
-      ></iframe>
-      <iframe
-        src="https://yandex.ru/map-widget/v1/?um=constructor%3A2b7f68146a437d5592bab59ec91b69de4eb88f9dca500bad09004fc0cde38ab8&amp;source=constructor"
-        width="100%"
-        height="500"
-        frameborder="0"
-        class="z-10"
-        v-if="isSergili"
-      ></iframe>
-      <iframe
-        src="https://yandex.ru/map-widget/v1/?um=constructor%3Afd8beeab1d0cb1bfe3560f1ce52e51cc9c23c9b237bfc8fa26dd1e8e21dd80eb&amp;source=constructor"
-        width="100%"
-        height="500"
-        frameborder="0"
-        class="z-10"
-        v-if="isTuzel"
-      ></iframe>
-      <iframe
-        src="https://yandex.ru/map-widget/v1/?um=constructor%3Aa6314e1f6a988f769c546b5089cd5c37d7606d8921a6a1fda8dafb166c193e3e&amp;source=constructor"
-        width="100%"
-        height="500"
-        frameborder="0"
-        class="z-10"
-        v-if="isPanelniy"
-      ></iframe>
-      <iframe
-        src="https://yandex.ru/map-widget/v1/?um=constructor%3A712cb928f0706ac3748dda2eef0fbb9eb0a21377d0ff7fd6f6df4ca9cceb283b&amp;source=constructor"
-        width="100%"
-        height="500"
-        frameborder="0"
-        class="z-10"
-        v-if="isYalongoch"
-      ></iframe>
-      <iframe
-        src="https://yandex.ru/map-widget/v1/?um=constructor%3A6c144da071997ec28b95fecbc7ed11268e290ea171413729a68e41ce6876c2ec&amp;source=constructor"
-        width="100%"
-        height="500"
-        frameborder="0"
-        class="z-10"
-        v-if="isQushbegi"
-      ></iframe>
-      <iframe
-        src="https://yandex.ru/map-widget/v1/?um=constructor%3A47a421d807febb95145a71d97edac9179fba6b4667769d48bd8f179c39ed6d4c&amp;source=constructor"
-        width="100%"
-        height="500"
-        frameborder="0"
-        class="z-10"
-        v-if="isSergili6a"
-      ></iframe>
-      <iframe
-        src="https://yandex.ru/map-widget/v1/?um=constructor%3A72a37e0d51e2b7cacc67818054282b0fd412cb753a98ecd0ce6392aa0926c849&amp;source=constructor"
-        width="100%"
-        height="500"
-        frameborder="0"
-        class="z-10"
-        v-if="isTuzel50"
-      ></iframe>
+      <div class="2xl:h-[862px] h-[616px] relative">
+
+        <iframe
+          src="https://yandex.com/map-widget/v1/?um=constructor%3A73748008eefd2cd0fdbedc588dbba1ae0eb1b1736568efbd69d5a4b876414713&amp;source=constructor"
+          width="100%"
+          height="620"
+          frameborder="0"
+          class="z-10"
+          v-if="isDefault"
+        ></iframe>
+        <iframe
+          src="https://yandex.ru/map-widget/v1/?um=constructor%3A2b7f68146a437d5592bab59ec91b69de4eb88f9dca500bad09004fc0cde38ab8&amp;source=constructor"
+          width="100%"
+          height="500"
+          frameborder="0"
+          class="z-10"
+          v-if="isSergili"
+        ></iframe>
+        <iframe
+          src="https://yandex.ru/map-widget/v1/?um=constructor%3Afd8beeab1d0cb1bfe3560f1ce52e51cc9c23c9b237bfc8fa26dd1e8e21dd80eb&amp;source=constructor"
+          width="100%"
+          height="500"
+          frameborder="0"
+          class="z-10"
+          v-if="isTuzel"
+        ></iframe>
+        <iframe
+          src="https://yandex.ru/map-widget/v1/?um=constructor%3Aa6314e1f6a988f769c546b5089cd5c37d7606d8921a6a1fda8dafb166c193e3e&amp;source=constructor"
+          width="100%"
+          height="500"
+          frameborder="0"
+          class="z-10"
+          v-if="isPanelniy"
+        ></iframe>
+        <iframe
+          src="https://yandex.ru/map-widget/v1/?um=constructor%3A712cb928f0706ac3748dda2eef0fbb9eb0a21377d0ff7fd6f6df4ca9cceb283b&amp;source=constructor"
+          width="100%"
+          height="500"
+          frameborder="0"
+          class="z-10"
+          v-if="isYalongoch"
+        ></iframe>
+        <iframe
+          src="https://yandex.ru/map-widget/v1/?um=constructor%3A6c144da071997ec28b95fecbc7ed11268e290ea171413729a68e41ce6876c2ec&amp;source=constructor"
+          width="100%"
+          height="500"
+          frameborder="0"
+          class="z-10"
+          v-if="isQushbegi"
+        ></iframe>
+        <iframe
+          src="https://yandex.ru/map-widget/v1/?um=constructor%3A47a421d807febb95145a71d97edac9179fba6b4667769d48bd8f179c39ed6d4c&amp;source=constructor"
+          width="100%"
+          height="500"
+          frameborder="0"
+          class="z-10"
+          v-if="isSergili6a"
+        ></iframe>
+        <iframe
+          src="https://yandex.ru/map-widget/v1/?um=constructor%3A72a37e0d51e2b7cacc67818054282b0fd412cb753a98ecd0ce6392aa0926c849&amp;source=constructor"
+          width="100%"
+          height="500"
+          frameborder="0"
+          class="z-10"
+          v-if="isTuzel50"
+        ></iframe>
+      </div>
+
+
+      <div class="filiallar 2xl:block hidden absolute  p-[30px] bottom-[50px] left-[50px] rounded-[8px] border-[1px] border-[#EAEAEA] bg-[#FFF]">
+          <div>
+            <h1 class="text-[#1B1B35] text-[32px] font-semibold mb-[20px]">Filiallar</h1>
+            <div class="sergili cursor-pointer border-b-[1px] border-[#EAEAEA] pb-[15px] mb-[15px]">
+                <p class="text-[#1B1B35]  2xl:text-[16px] text-[14px] font-medium">
+                  Sergeli tumani Quruvchilar massivi 32 uy 1 qavat. Mo'ljal 305-maktab
+                </p>
+                <p class="text-[#808080] 2xl:text-[18px] text-[14px] font-normal">
+                  Tel: 99 435 11 88
+                </p>
+            </div>
+            <div class="sergili cursor-pointer border-b-[1px] border-[#EAEAEA] pb-[15px] mb-[15px]">
+                <p class="text-[#1B1B35]  2xl:text-[16px] text-[14px] font-medium">
+                  Yashnobod tumani Tuzel chorraxa 2-qavat
+                </p>
+                <p class="text-[#808080] 2xl:text-[18px] text-[14px] font-normal">
+                  Tel: 99 919 11 88
+                </p>
+            </div>
+            <div class="sergili cursor-pointer border-b-[1px] border-[#EAEAEA] pb-[15px] mb-[15px]">
+                <p class="text-[#1B1B35]  2xl:text-[16px] text-[14px] font-medium">
+                  Yashnobod tumani Panelniy massiv Oxangrabo ko'chasi
+                </p>
+                <p class="text-[#808080] 2xl:text-[18px] text-[14px] font-normal">
+                  Tel: 94 424 11 88
+                </p>
+            </div>
+            <div class="sergili cursor-pointer border-b-[1px] border-[#EAEAEA] pb-[15px] mb-[15px]">
+                <p class="text-[#1B1B35]  2xl:text-[16px] text-[14px] font-medium">
+                  Mirzo Ulugbek tumani yalangoch daxasi Madaniyat instituti yaqinida
+                </p>
+                <p class="text-[#808080] 2xl:text-[18px] text-[14px] font-normal">
+                  Tel: 88 333 11 88
+                </p>
+            </div>
+            <div class="sergili cursor-pointer border-b-[1px] border-[#EAEAEA] pb-[15px] mb-[15px]">
+                <p class="text-[#1B1B35]  2xl:text-[16px] text-[14px] font-medium">
+                  Yakkasaroy tumani Qushbegi daxasi 30 B uy. Oldingi Sulton restorani binosi 3 qavat
+                </p>
+                <p class="text-[#808080] 2xl:text-[18px] text-[14px] font-normal">
+                  Tel: 90 929 11 88
+                </p>
+            </div>
+            <div class="sergili cursor-pointer border-b-[1px] border-[#EAEAEA] pb-[15px] mb-[15px]">
+                <p class="text-[#1B1B35]  2xl:text-[16px] text-[14px] font-medium">
+                  Sergeli tumani 6A 77 uy
+                </p>
+                <p class="text-[#808080] 2xl:text-[18px] text-[14px] font-normal">
+                  Tel: 99 710 05 55
+                </p>
+            </div>
+            <div class="sergili cursor-pointer pb-[15px] mb-[15px]" v-on:click="isOpen = !isOpen">
+                <p class="text-[#1B1B35]  2xl:text-[16px] text-[14px] font-medium">
+                  Yashnobod tumani Tuzel - 1 50 uy
+                </p>
+                <p class="text-[#808080] 2xl:text-[18px] text-[14px] font-normal">
+                  Tel: 93 009 77 88
+                </p>
+            </div>
+          </div>  
+      </div>
+
       <div
-        class="flex items-center justify-between 2xl:w-[578px] w-[353px] py-[10px] px-[15px] rounded-[6px] border-[1px] border-[#EAEAEA] relative top-[-72px] left-0 bg-white mx-[20px]"
+        class="2xl:hidden flex items-center justify-between 2xl:w-[578px] h-[60px]  w-[353px] py-[10px] px-[15px] rounded-[6px] border-[1px] border-[#EAEAEA] relative top-[-72px] left-0 bg-white mx-[20px]"
       >
         <div class="flex items-center justify-between w-full">
           <p
@@ -80,10 +147,10 @@
             v-if="isSergili"
             v-on:click="isOpen = !isOpen"
           >
-            <p class="text-[#1B1B35]  text-[16px] font-medium">
+            <p class="text-[#1B1B35]  2xl:text-[16px] text-[14px] font-medium">
               Sergeli tumani Quruvchilar massivi 32 uy 1 qavat. Mo'ljal 305-maktab
             </p>
-            <p class="text-[#808080] text-[18px] font-normal">
+            <p class="text-[#808080] 2xl:text-[18px] text-[14px] font-normal">
               Tel: 99 435 11 88
             </p>
           </div>
@@ -92,20 +159,20 @@
             v-if="isTuzel"
             v-on:click="isOpen = !isOpen"
           >
-            <h3 class="text-[18px] font-normal text-[#1B1B35]">
+            <h3 class="2xl:text-[18px] text-[14px] font-normal text-[#1B1B35]">
               Yashnobod tumani Tuzel chorraxa 2-qavat
             </h3>
-            <p class="text-[#808080] text-[18px] font-normal">Tel 99 919 11 88</p>
+            <p class="text-[#808080] 2xl:text-[18px] text-[14px] font-normal">Tel 99 919 11 88</p>
           </div>
           <div
             class="Panelniy cursor-pointer"
             v-if="isPanelniy"
             v-on:click="isOpen = !isOpen"
           >
-            <h3 class="text-[18px] font-normal text-[#1B1B35]">
+            <h3 class="2xl:text-[18px] text-[14px] font-normal text-[#1B1B35]">
               Yashnobod tumani Panelniy massiv Oxangrabo ko'chasi
             </h3>
-            <p class="text-[#808080] text-[18px] font-normal">
+            <p class="text-[#808080] text-[14px] 2xl:text-[18px] font-normal">
               Tel: 94 424 11 88
             </p>
           </div>
@@ -114,10 +181,10 @@
             v-if="isYalongoch"
             v-on:click="isOpen = !isOpen"
           >
-            <h3 class="text-[18px] font-normal text-[#1B1B35]">
+            <h3 class="2xl:text-[14px] text-[12px] font-normal text-[#1B1B35]">
               Mirzo Ulugbek tumani yalangoch daxasi Madaniyat instituti yaqinida
             </h3>
-            <p class="text-[#808080] text-[18px] font-normal">
+            <p class="text-[#808080] 2xl:text-[17px] text-[14px] font-normal">
               Tel: 88 333 11 88
             </p>
           </div>
@@ -126,11 +193,11 @@
             v-if="isQushbegi"
             v-on:click="isOpen = !isOpen"
           >
-            <h3 class="text-[18px] font-normal text-[#1B1B35] text-left">
+            <h3 class="2xl:text-[14px] text-[12px] font-normal text-[#1B1B35] text-left">
               Yakkasaroy tumani Qushbegi daxasi 30 B uy. Oldingi Sulton restorani
               binosi 3 qavat
             </h3>
-            <p class="text-[#808080] text-[18px] font-normal">
+            <p class="text-[#808080] 2xl:text-[14px] text-[12px] font-normal">
               Tel: 90 929 11 88
             </p>
           </div>
@@ -336,5 +403,12 @@
   </script>
   
   <style scoped>
+  iframe{
+    width: 100%;
+    height: 100%;
+  }
+  .filiallar{
+    box-shadow: 3px 4px 10px 0px rgba(37, 37, 49, 0.08);
+  }
   </style>
   
