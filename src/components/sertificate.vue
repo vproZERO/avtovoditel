@@ -22,13 +22,17 @@
 
             <div v-if="isOpen" class="absolute inset-0 bg-black bg-opacity-[50%]">
                 <div class="2xl:w-[663px] 2xl:mt-[10%] relative w-[353px] 2xl:h-[800px] h-[455px] mt-[40%] mt-[] mx-auto">
-                    <button v-on:click="isOpen = !isOpen" class="absolute text-white font-bold text-2xl top-[-30px] right-[-5px]">X</button>
+                    <button v-on:click="isOpen = !isOpen" class="absolute text-white font-bold text-2xl top-[-30px] right-[-5px]">
+                        <img src="../assets/plus.svg" alt="plus">
+                    </button>
                     <img  src="../assets/sertificate.svg" alt="sertificate">
                 </div>
             </div>
             <div v-if="isOpen2" class="absolute inset-0 bg-black bg-opacity-[50%]">
                 <div class="2xl:w-[663px] 2xl:mt-[10%] relative w-[353px] 2xl:h-[800px] h-[455px] mt-[100%] mt-[] mx-auto">
-                    <button v-on:click="isOpen2 = !isOpen2" class="absolute text-white font-bold text-2xl top-[-30px] right-[-5px]">X</button>
+                    <button v-on:click="isOpen2 = !isOpen2" class="absolute text-white font-bold text-2xl top-[-30px] right-[-5px]">
+                        <img src="../assets/plus.svg" alt="plus">
+                    </button>
                     <img  src="../assets/sertificate2.svg" alt="sertificate">
                 </div>
             </div>

@@ -136,7 +136,7 @@
         </div>
 
         <div class="fixed top-0 bottom-0 left-0 right-0 bg-black bg-opacity-[50%] overflow-hidden " v-if="isOpen">
-            <div class="header_modal bg-white 2xl:w-[450px] w-[353px] h-[315px] mx-auto 2xl:h-[405px] mx-auto 2xl:mt-[10%] mt-[234px] p-[20px] rounded-[12px] 2xl:py-[40px] 2xl:px-[30px] relative">
+            <div class="header_modal bg-white 2xl:w-[450px] w-[353px]  mx-auto 2xl:h-[405px] mx-auto 2xl:mt-[10%] mt-[234px] p-[20px] rounded-[12px] 2xl:py-[40px] 2xl:px-[30px] relative">
                 <button v-on:click="isOpen = !isOpen" class="absolute top-[-30px] right-0">
                     <img src="../assets/plus.svg" alt="plus">
                 </button>
@@ -162,6 +162,10 @@
         <div class="absolute bottom-0 right-0 w-[448px] 2xl:block hidden " >
             <img src="../assets/carvector.png" alt="">
         </div>
+
+        <button @click="scrollToTop" class="fixed bottom-[5%] right-[20px] 2xl:w-[60px] w-[40px] h-[40px] 2xl:h-[60px] p-[12px] bg-[#407BFF] rounded-[12px]">
+            <img  src="../assets/arrow2.svg" alt="arrow">
+        </button>
     </div>
 </template>
 <script>
@@ -179,6 +183,12 @@ export default {
     },
     
     methods: {
+        scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            })
+        },
         loginAction() {
             this.isSubmitting = true;
             let payload = {
@@ -195,7 +205,7 @@ export default {
                         title: "Arizangiz qabul qilindi)",
                         showConfirmButton: false,
                         iconColor: '#407BFF',
-                        timer: 1500,
+                        timer: 2000,
                     })
                 }else{
                     Swal.fire({
