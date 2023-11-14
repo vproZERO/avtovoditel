@@ -177,6 +177,7 @@ export default {
                         icon: 'success',
                         title: "Arizangiz qabul qilindi)",
                         showConfirmButton: false,
+                        iconColor: '#407BFF',
                         timer: 1500,
                     })
                 }else{
