@@ -110,7 +110,7 @@
 
 
         <div class="fixed top-0 bottom-0 left-0 right-0 bg-black bg-opacity-[50%] overflow-hidden z-40" v-if="isOpen">
-            <div class="header_modal bg-white 2xl:w-[450px] w-[353px] h-[315px] mx-auto 2xl:h-[405px] mx-auto 2xl:mt-[10%] mt-[234px] p-[20px] rounded-[12px] 2xl:py-[40px] 2xl:px-[30px] relative">
+            <div class="header_modal bg-white 2xl:w-[450px] w-[353px]  mx-auto  mx-auto 2xl:mt-[10%] mt-[234px] p-[20px] rounded-[12px] 2xl:py-[40px] 2xl:px-[30px] relative">
                 <button v-on:click="isOpen = !isOpen" class="absolute top-[-30px] right-0">
                     <img src="../assets/plus.svg" alt="plus">
                 </button>
