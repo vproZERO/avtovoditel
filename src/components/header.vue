@@ -12,11 +12,11 @@
                         <div class="border-b-[1px] border-white border-opacity-[10%] pb-[20px] mb-[20px]">
                             <div>
                                 <p class="text-white text-[24px] font-black uppercase mb-[15px]">Hech qanday qo'rquv  va stresslarsiz Mashina haydashni o'rganing!</p>
-                                <div class="flex items-center gap-[10px]">
-                                    <div class="rounded-[8px] py-[5px] px-[15px] bg-[#323E55]">
+                                <div class="">
+                                    <div class="rounded-t-[8px] border-b-[1px] border-[#455674] py-[10px] px-[15px] bg-[#323E55]">
                                         <p class="font-medium text-[14px] text-white">B kategoriyasi uchun boshlang'ich to'lov 1 160 000 so'mdan 0% nasiya </p>
                                     </div>
-                                    <div class="rounded-[8px] py-[5px] px-[15px] bg-[#323E55]">
+                                    <div class="rounded-b-[8px] py-[10px] px-[15px] bg-[#323E55]">
                                         <p class="font-medium text-[14px] text-white">Haftada 6 kun </p>
                                     </div>
                                 </div>
@@ -277,8 +277,8 @@ input{
             
             background-image: url('../assets/header-bg2.png');
             background-repeat: no-repeat;
-            background-position-x: 100%;
-            background-position-y: top;
+            background-position-x: 100% ;
+            background-position-y: -15px;
         }
     }
 </style>
