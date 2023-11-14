@@ -118,8 +118,14 @@
                 <h1 class="text-center 2xl:text-[24px] text-[20px] font-semibold mb-[3px]">Telefon raqamingizni qoldiring</h1>
                 <p class="text-center text-[#BABABA] 2xl:text-[18px] text-[16px] mb-[20px]">Biz siz bilan albatta bog'lanamiz</p>
                 <form >
-                    <input class="border-b-[1px] border-[#E0E0E0] w-full 2xl:mb-[50px] mb-[40px]" type="text" id="name" name="name" v-model="name" placeholder="Ism">
-                    <input class="border-b-[1px] border-[#E0E0E0] w-full mb-[50px] " type="tel" id="tel" name="tel" v-model="tel" placeholder="Raqamingiz">
+                    <div class="input-container border-b-[1px] border-[#E0E0E0] w-full mb-[40px]">
+                        <input class="" type="text" id="name" name="name" v-model="name" required>
+                        <label for="name">Ism</label>
+                    </div>
+                    <div class="input-container border-b-[1px] border-[#E0E0E0] w-full mb-[40px]">
+                        <input class=" " type="tel" id="tel" name="tel" v-model="tel" required>
+                        <label for="tel">Raqamingiz</label> 
+                    </div>
                 </form>
                 <button class="w-full py-[14px] bg-[#407BFF] rounded-[50px] 2xl:rounded-[52px] 2xl:py-[15px]">
                     <p class="text-white 2xl:text-[20px] font-medium text-center text-[16px]" @click="loginAction()">Ariza qoldirish</p>
@@ -211,7 +217,31 @@ export default {
         transition: 0.3s;
         font-weight: 400;
     }
-    input{
-    outline: none;
+    .input-container {
+      position: relative;
     }
+
+    input {
+      width: 100%;
+      padding: 10px;
+    }
+
+    label {
+      position: absolute;
+      top: 50%;
+      left: 10px;
+      transform: translateY(-50%);
+      pointer-events: none;
+      transition: 0.3s;
+    }
+
+    input:focus + label,
+    input:valid + label {
+      top: 5px;
+      font-size: 12px;
+      color: #407BFF;
+    }
+input{
+    outline: none;
+}
 </style>
