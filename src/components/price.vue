@@ -1,5 +1,5 @@
 <template>
-    <div class="2xl:py-[150px] py-[50px] overflow-hidden relative">
+    <div id="narxlar" class="2xl:py-[150px] py-[50px] overflow-hidden relative">
         <h1 class="text-center font-bold text-[#1B1B35] text-[24px] 2xl:text-[40px] 2xl:mb-[40px] mb-[15px] aos-init aos-animate " data-aos="fade-up" data-aos-duration="1500">Narxlar</h1>
         <div class="flex items-center 2xl:w-[416px] w-[353px] mx-auto justify-center gap-6 mt-[23px] p-[2px] bg-[#F3F3F3] rounded-lg">
             <h2 class="text-[14px]  2xl:text-[16px] 2xl:leading-[18px] 2xl:py-[14px] 2xl:px-[12px] 2xl:w-[206px] w-[174px] px-[12px] py-[6px] rounded-lg leading-4 cursor-pointer aos-init aos-animate" data-aos="fade-right" data-aos-duration="1500" :class="isNaqd ? 'active' : 'deactivated'" @click="oylikToNaqd">Naqt to'lash</h2>

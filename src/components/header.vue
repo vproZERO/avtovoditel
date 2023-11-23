@@ -72,13 +72,14 @@
 
 
 
-        <div class=" 2xl:w-[859px] pb-[137px] mx-auto 2xl:block hidden">
-            <div class="flex items-start justify-between mb-[62px]">
+        <div class=" 2xl:w-[1259px] pb-[137px] mx-auto 2xl:block hidden">
+            <div class="flex items-start justify-between mb-[62px] mt-[20px]">
                 <a href="#">
                     <img src="../assets/logo.svg" alt="logo">
                 </a>
-                <div class="bg-[#FFFFFF] py-[10px] px-[20px] bg-opacity-[10%] rounded-b-[4px] mx-auto ">
-                    <p class="text-[#D8E1FF] text-[20px] gont-medium">Xonalarimiz eshiklari siz uchun ochiq</p>
+                <div class="bg-[#444444] border-[1px] border-[#515359] py-[15px] px-[30px] rounded-[50px] gap-[40px] flex mx-auto ">
+                    <a class="text-white text-[18px] font-medium hover:text-[#407BFF]" href="#narxlar">Narxlar</a>
+                    <a class="text-white text-[18px] font-medium hover:text-[#407BFF]" href="#filiallar">Filiallar</a>
                 </div>
             </div>
 
@@ -86,7 +87,7 @@
                 <div class="mb-[70px]">
                     <div class="mb-[50px]">
                         <p class="mb-[20px] font-black text-[50px] w-[746px] uppercase text-white">Hech qanday qo'rquv va stresslarsiz Mashina haydashni o'rganing!</p>
-                        <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-[10px]">
                             <div class="bg-[#407BFF] rounded-[8px] py-[10px] px-[15px] ">
                                 <p class="text-white text-[20px] font-normal">B kategoriyasi uchun boshlang'ich to'lov 1 160 000 so'mdan 0% nasiya </p>
                             </div>
@@ -160,6 +161,9 @@
         </div>
 
         <div class="absolute bottom-0 right-0 w-[448px] 2xl:block hidden " >
+            <div class="bg-[#4C4C4C]  py-[10px] px-[20px] rounded-l-[16px] rounded-t-[16px] absolute bottom-[301px] right-[58px]">
+                <p class="text-[#D8E1FF] text-[20px] font-medium text-center">Xonalarimiz eshiklari siz uchun ochiq</p>
+            </div>
             <img src="../assets/carvector.png" alt="">
         </div>
 
