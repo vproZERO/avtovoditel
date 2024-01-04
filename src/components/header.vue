@@ -214,7 +214,21 @@ export default {
                     icon: "success",
                     iconColor: '#407BFF',
                     timer: 2000,
-                    showConfirmButton: false
+                    showConfirmButton: false,
+                    showClass: {
+                        popup: `
+                            animate__animated
+                            animate__fadeInUp
+                            animate__faster
+                        `
+                    },
+                    hideClass:{
+                        popup: `
+                            animate__animated
+                            animate__fadeOutDown
+                            animate__faster
+                        `
+                    }
                 })
             })
             .catch(error => {
@@ -222,6 +236,20 @@ export default {
                 Swal.fire({
                     title: "Arizangiz yuborilmadi",
                     icon: "error",
+                    showClass: {
+                        popup: `
+                            animate__animated
+                            animate__fadeInUp
+                            animate__faster
+                        `
+                    },
+                    hideClass:{
+                        popup: `
+                            animate__animated
+                            animate__fadeOutDown
+                            animate__faster
+                        `
+                    },
                     showConfirmButton: false
                 })
             })
