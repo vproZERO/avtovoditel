@@ -117,7 +117,7 @@
 
                 <h1 class="text-center 2xl:text-[24px] text-[20px] font-semibold mb-[3px]">Telefon raqamingizni qoldiring</h1>
                 <p class="text-center text-[#BABABA] 2xl:text-[18px] text-[16px] mb-[20px]">Biz siz bilan albatta bog'lanamiz</p>
-                <form >
+                <form @submit.prevent="submitForm">
                     <div class="input-container border-b-[1px] border-[#E0E0E0] w-full mb-[40px]">
                         <input class="" type="text" id="name" name="name" v-model="name" required>
                         <label for="name">Ism</label>
@@ -126,10 +126,10 @@
                         <input class=" " type="tel" id="tel" name="tel" v-model="tel" required>
                         <label for="tel">Raqamingiz</label> 
                     </div>
+                    <button type="submit" class="w-full py-[14px] bg-[#407BFF] rounded-[50px] 2xl:rounded-[52px] 2xl:py-[15px]">
+                        <p class="text-white 2xl:text-[20px] font-medium text-center text-[16px]">Ariza qoldirish</p>
+                    </button>
                 </form>
-                <button class="w-full py-[14px] bg-[#407BFF] rounded-[50px] 2xl:rounded-[52px] 2xl:py-[15px]">
-                    <p class="text-white 2xl:text-[20px] font-medium text-center text-[16px]" @click="loginAction()">Ariza qoldirish</p>
-                </button>
             </div>
         </div>
     </div>
@@ -146,7 +146,10 @@ export default {
             name: "",
             tel: "",
             validationErrors: {},
-            isSubmitting: false
+            isSubmitting: false,
+
+            telegramBotToken: '6759172233:AAGRTTni5aSpI5flaMzPhlJMZUvq_BGqYeE',
+            chatId: 660182754,
         }
     },
     methods: {
@@ -162,41 +165,33 @@ export default {
                 this.isOylik = false
             }
         },
-        loginAction() {
-            this.isSubmitting = true;
-            let payload = {
-                name : this.name,
-                tel : this.tel
-            };
-            axios.post("https://fakestoreapi.com/users" , payload).then((res) => {
-                localStorage.setItem("token", res.data.token);
-
-                if(this.name, this.tel){
-                    this.isOpen = false;
-                    Swal.fire({
-                        icon: 'success',
-                        title: "Arizangiz qabul qilindi)",
-                        showConfirmButton: false,
-                        iconColor: '#407BFF',
-                        timer: 1500,
-                    })
-                }else{
-                    Swal.fire({
-                        icon: 'warning',
-                        title: 'Iltimos malumotlaringizni toliq kiritsangiz!)',
-                        showConfirmButton: false,
-                        timer: 1800,
-                    })
-                }
-
-                return res
+        submitForm() {
+            const fullMessage = `Full name: ${this.name}
+                                 \n Tel: ${this.tel}
+                                 `
+            axios.post(`https://api.telegram.org/bot${this.telegramBotToken}/sendMessage?chat_id=${this.chatId}&text=${fullMessage}`, {
+                name: this.name,
+                tel: this.tel,
+                chatId: this.chatId,
+                telegramBotToken: this.telegramBotToken
             })
-            .catch((error) => {
-                this.isSubmitting = false;
-                if(error.res.data.errors != undefined) {
-                    this.validationErrors = error.res.data.errors
-                }
-                return error
+            .then(response => {
+                console.log(response.data);
+                Swal.fire({
+                    title: "Arizangiz muvafaqqiyatli yuborildi",
+                    icon: "success",
+                    iconColor: '#407BFF',
+                    timer: 2000,
+                    showConfirmButton: false
+                })
+            })
+            .catch(error => {
+                console.log(error);
+                Swal.fire({
+                    title: "Arizangiz yuborilmadi",
+                    icon: "error",
+                    showConfirmButton: false
+                })
             })
         }
     },
